@@ -35,8 +35,9 @@ function play(choice) //when the player clicks on the board, this function chang
             else
             {
                 document.getElementById(choice).innerHTML = "X";
+                document.getElementById(choice).style.cursor = "not-allowed"; //when the cursor passes through this position, it shows as "not allowed".
                 turn++; //change turn
-				turnCheck(); //change the turn on the screen to show the next player's turn
+                turnCheck(); //change the turn on the screen to show the next player's turn
             }
         }
 
@@ -52,6 +53,7 @@ function play(choice) //when the player clicks on the board, this function chang
             else
             {
                 document.getElementById(choice).innerHTML = "O";
+                document.getElementById(choice).style.cursor = "not-allowed"; //when the cursor passes through this position, it shows as "not allowed".
                 turn--; //change turn
 				turnCheck(); //change the turn on the screen to show the next player's turn
             }
@@ -140,6 +142,17 @@ function repeat() //reset the game to another round
     pos("pos7").innerHTML = "7";
     pos("pos8").innerHTML = "8";
     pos("pos9").innerHTML = "9";
+
+    //reset the type of cursor that show when the cursor pass through the grid elements
+    pos("pos1").style.cursor = "pointer";
+    pos("pos2").style.cursor = "pointer";
+    pos("pos3").style.cursor = "pointer";
+    pos("pos4").style.cursor = "pointer";
+    pos("pos5").style.cursor = "pointer";
+    pos("pos6").style.cursor = "pointer";
+    pos("pos7").style.cursor = "pointer";
+    pos("pos8").style.cursor = "pointer";
+    pos("pos9").style.cursor = "pointer";
     
     turn = 1; //reset the game turn
 
