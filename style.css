@@ -1,0 +1,18 @@
+body {
+    background-color: rgb(90, 90, 90);
+    color: black;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(0, 119, 255);
+}
+
+code {
+    color: red;
+}
+
+.articles {
+    margin: auto 50% auto auto;
+    border-bottom: 2px solid;
+}
